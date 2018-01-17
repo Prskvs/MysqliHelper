@@ -59,7 +59,7 @@ class DB{
 		return true;
 	}
 
-	function createTable($name, $columns = []){
+	function createTable($name, $columns = [], $params = 'ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 DEFAULT COLLATE=utf8mb4_unicode_ci'){
 		if (!is_array($columns)){
 			throw new Exception('invalid columns');
 			return false;
@@ -70,7 +70,7 @@ class DB{
 		foreach($columns as $column => $type){
 			$cols .= '`' .$column . '` ' . $type . ',';
 		}
-		$sql = "CREATE TABLE IF NOT EXISTS `" . $this->prefix . $name . "` (" . rtrim($cols, ',') . ") ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 DEFAULT COLLATE=utf8mb4_unicode_ci;";
+		$sql = "CREATE TABLE IF NOT EXISTS `" . $this->prefix . $name . "` (" . rtrim($cols, ',') . ") " . $params . ";";
 		if(!$this->conn->query($sql)){
 			throw new Exception('Could not create table ' . ($this->error_report === 'browser') ? $this->conn->error : '');
 			return false;
