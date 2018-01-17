@@ -12,12 +12,13 @@ This project is still in Alpha version. Some commands are missing, prepared stat
 
 ---
 
-##Contributors
+Contributors
+---
 
 - Prskvs
 
 ---
-
-##Copyright
+Copyright
+---
 
 Copyright (C) Prskvs 2017
