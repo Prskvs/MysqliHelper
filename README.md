@@ -74,7 +74,7 @@ $db->createTable ($table_name, $columns_array, $params);
 ### Table Insertion
 insert function adds new entries to the desired table. It uses similar decleration as table creation.
 ```php
-$db->insert ($table_name, $columns_array = ['name' => "Harry", 'job' => Pphotographer"]);
+$db->insert ($table_name, $columns_array = ['name' => "Harry", 'job' => "Pphotographer"]);
 ```
 Optional parameter if true returns last inserted id.
 ```php
