@@ -88,7 +88,7 @@ $db->insert ($table_name, $columns_array = ['name', 'job'], $values_array = ['Ha
 ```
 Multiple insertions can be done by making the values array as an array of arrays.
 ```php
-$db->insert ($table_name, $columns_array, $values_array = array(['Harry', 'Photographer'], ['John', 'Writer']));
+$db->insert ($table_name, $columns_array, $values_array = array (['Harry', 'Photographer'], ['John', 'Writer']));
 ```
 
 ### Data Selection
@@ -117,7 +117,7 @@ $db->selectPrepared ($table_name, $columns_array = ['name', 'job'], $values_arra
 ```
 Multiple selections can be done by making the values array as an array of arrays.
 ```php
-$db->selectPrepared ($table_name, $columns_array, $values_array = array(['Harry', 'Photographer'], ['John', 'Writer']));
+$db->selectPrepared ($table_name, $columns_array, $values_array = array (['Harry', 'Photographer'], ['John', 'Writer']));
 ```
 Conditions and joins work the same as the non prepared select function.
 
