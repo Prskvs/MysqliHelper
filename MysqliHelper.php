@@ -16,7 +16,7 @@ class MysqliHelper {
 	}
 
 	function __destruct () {
-
+		$this->close();
 	}
 
 	public function connect ($use_db = false) {
